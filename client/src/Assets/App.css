@@ -1,0 +1,10 @@
+body{
+    background: radial-gradient(63.5% 85.28% at 50% 50%, #232323 0%, #000000 100%);
+    color: var(--white-color);
+}
+.App{
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+
+}

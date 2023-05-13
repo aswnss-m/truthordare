@@ -1,0 +1,100 @@
+.gameContainer{
+    display: grid;
+    width: 100%;
+    min-height: 100%;
+    grid-template-areas: "logo blank buttons"
+                        "card card chat"
+                        "players players chat";
+    grid-template-rows: 10% 75% 15%;
+    place-items: center;
+    padding: 1em;
+}
+.gameButtonsContainer{
+    grid-area: buttons;
+    display: flex;
+    align-items: center;
+    gap: .25em;
+    width: 100%;
+    justify-content: end;
+}
+.gameVoiceConnectButton{
+    background-color: #3dd73d;
+    padding:.25em 1em;
+    border-radius: .5em;
+}
+.gameEndButton,.gameCustomButton{
+    font-size: .4em;
+    background-color: var(--accent-color);
+    padding:.25em 1em;
+    border-radius: .5em;
+}
+.gameCustomButton{
+    background-color: var(--white-color);
+    color: var(--black-color);
+}
+.gameCardsContainer{
+    display: flex;
+    grid-area: card;
+    margin: 1em;
+}
+.gameChatContainer{
+    grid-area: chat;
+    font-size: medium;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1em;
+    border: 2px solid white;
+    border-radius: 1em;
+    justify-content: end;
+}
+.gameChatRow{
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.gameChatBar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.gameChatBar input{
+    background-color: transparent;
+    padding: 1em;
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 10px;
+    color:white
+}
+.gameChatBar span{
+
+    margin: 5px;
+}
+.gamePlayersContainer{
+    grid-area: players;
+    font-size: large;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+.gamePlayer{
+    padding: .25em 1em;
+    margin: .25em;
+    border-radius: .5em;
+    background-color:var(--accent-color);
+}
+@media  screen and (max-width:850px) {
+    .gameContainer{
+        grid-template-areas: "logo blank buttons"
+                            "card card card"
+                            "players players players"
+                            "chat chat chat";
+        grid-template-rows: 5% 50% auto 35%;
+        /* grid-auto-rows: auto; */
+        place-items: center;
+        padding: 1em;
+    }
+}

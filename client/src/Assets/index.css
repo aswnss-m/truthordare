@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'felichiya';
+  src:url("../Assets/FelichiyaFont.ttf") format("truetype");
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Itim', cursive;
+  /* font-family: 'felichiya'; */
+}
+html{
+  width: 100%;
+  font-size: 32pt;
+}
+:root{
+  --accent-color:#FF6161;
+  --white-color : #fefefe;
+  --black-color : #000;
+}
+body{
+  width: 100%;
+  min-height:100vh;
+}

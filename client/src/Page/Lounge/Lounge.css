@@ -1,0 +1,107 @@
+.loungeContainer{
+    display: grid;
+    width: 100%;
+    min-height: 100vh;
+    grid-template-areas: "logo blank roomid"
+                         "input input table";
+    grid-template-rows: 20% 80%;
+    grid-template-columns: 10% 45% 45%;
+    padding: 1em;
+}
+.roomId{
+    justify-self: center;
+    align-self: center;
+    grid-area: roomid;
+    font-size: large;
+    font-weight:bold;
+    /* color: var(--accent-color); */
+    background-color: var(--accent-color);
+    padding: 10px;
+    border-radius: 10px;
+}
+.logoLounge{
+    grid-area: logo;
+    width: 100px;
+}
+.loungeInput{
+    grid-area: input;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    gap: .25em;
+    color: white;
+}
+#playerName{
+    padding: 1em;
+    width: 90%;
+    margin: 0 5%;
+    background: transparent;
+    border-radius: 1em;
+    color: var(--white-color);
+}
+.genderButtonGroup{
+    display: flex;
+    width: 100%;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+}
+.playerGender{
+    max-width: 100px;
+    width: 40%;
+    padding: .5em 2em;
+    background: transparent;
+    border-radius: .5em;
+    color: white;
+}
+.selectedButton{
+    background-color: white;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+.playerReady{
+    padding: .5em;
+    width: 40%;
+    align-self: center;
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: .5rem;
+    border-radius: 1em;
+    border:none;
+}
+.loungeChart{
+    width: 90%;
+    place-self: center;
+    min-height: 100%;
+    grid-area: table;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid white;
+    border-radius: 1em;
+    padding: 1em 0;
+    align-items: center;
+}
+.loungeChartRow{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    justify-content: space-between;
+    font-size: .5rem;
+}
+@media  screen and (max-width:600px) {
+    .loungeContainer{
+        grid-template-areas: "logo logo"
+                            "roomid roomid"
+                             "input input"
+                             "table table";
+        grid-template-rows: .5fr .5fr 1fr auto;
+        grid-template-columns: 10% 90%;
+    }
+    .loungeInput{
+        margin-bottom: 1em;
+    }
+    .logoLounge{
+        justify-self: center;
+    }
+}
